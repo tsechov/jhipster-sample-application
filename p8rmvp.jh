@@ -1,0 +1,44 @@
+entity Goal {
+	title String required
+}
+
+entity AcceptanceCriteria {
+	title String required
+    description String required
+}
+
+relationship OneToMany {
+	Goal{acceptanceCriteria} to AcceptanceCriteria
+}
+
+entity Team {
+	name String required
+}
+
+relationship OneToMany {
+	Goal{team} to Team
+}
+
+entity TeamMember {
+	name String required
+    role String
+    phone String
+    email String
+}
+
+relationship OneToMany {
+	Team{member} to TeamMember
+}
+
+entity Task {
+	title String required
+    description String
+}
+
+relationship OneToMany {
+	AcceptanceCriteria{task} to Task
+}
+
+relationship ManyToMany {
+	TeamMember{task} to Task{teamMember}
+}

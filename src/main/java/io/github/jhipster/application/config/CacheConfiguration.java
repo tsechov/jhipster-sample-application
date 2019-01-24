@@ -41,6 +41,17 @@ public class CacheConfiguration {
             cm.createCache(io.github.jhipster.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.github.jhipster.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Goal.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Goal.class.getName() + ".acceptanceCriteria", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Goal.class.getName() + ".teams", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.AcceptanceCriteria.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.AcceptanceCriteria.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Team.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Team.class.getName() + ".members", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.TeamMember.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.TeamMember.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Task.class.getName() + ".teamMembers", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
