@@ -1,0 +1,35 @@
+{
+    "name": "Goal",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "acceptanceCriteria",
+            "otherEntityName": "acceptanceCriteria",
+            "otherEntityRelationshipName": "goal"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "team",
+            "otherEntityName": "team",
+            "otherEntityRelationshipName": "goal"
+        }
+    ],
+    "changelogDate": "20190124135614",
+    "entityTableName": "goal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
